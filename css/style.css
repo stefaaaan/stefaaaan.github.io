@@ -58,6 +58,96 @@ p {
 /* ==============================================================
    HEADER
    ============================================================== */
+
+
+:root {
+	--animation-delay: 190ms;
+	--duration: 1666ms;
+	--iterations: 100;
+}
+
+
+.reveal-text,
+.reveal-text::after {
+	animation-delay: var(--animation-delay, 2s);
+	animation-iteration-count: var(--iterations, 1);
+	animation-duration: var(--duration, 800ms);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal-text {
+	position: relative;
+	font-size: 69px;
+	animation-name: clip-text;
+	color: #FFF;
+	white-space: nowrap;
+	cursor: default;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #f2f98b;
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		pointer-events: none;
+		animation-name: text-revealer;
+	}
+	
+}
+
+
+@keyframes clip-text {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes text-revealer {
+	
+	0%, 50% {
+		transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		transform: scaleX(1);
+	}
+	
+	100% {
+		transform: scaleX(0);
+	}
+}
+
+
+
+
+
+
+
+
+
+@use postcss-preset-env {
+  stage: 0;
+  grid: true;
+  browsers: last 2 versions
+}
+
+
+
 .nav-menu {
   position: absolute;
   z-index: 1;
@@ -179,7 +269,8 @@ p {
   text-align: center; }
 
 .slider-content_wrap h5 {
-  color: #909090;
+  text-shadow: 1.5px 1.5px #fff; 
+  color: #38b0cd;
   font-weight: 400;
   margin: 24px 0; }
 
@@ -244,7 +335,8 @@ p {
   padding-right: 10px; }
 
 .slider-link {
-  color: #909090;
+  text-shadow: 1.5px 1.5px #fff; 
+  color: #3bd9ff;
   margin: 45px 0 0;
   font-size: 19px; }
   @media (max-width: 480px) {
@@ -254,7 +346,8 @@ p {
       .slider-link span {
         display: block; } }
   .slider-link a {
-    color: #909090;
+    text-shadow: 1.5px 1.5px #fff; 
+    color: #3bd9ff;
     text-decoration: underline;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -954,4 +1047,3 @@ footer {
   height: 100%;
   width: 100%; }
 
-/*# sourceMappingURL=style.css.map */
