@@ -1,0 +1,92 @@
+<HTML>
+
+<HEAD>
+  <TITLE>Thank You</TITLE>
+  <style>
+    body {
+  background-image: url(images/thank.jpg);
+  background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+div{
+  height: 550px;
+  width: 875px;
+  text-align: justify;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+}
+
+#main-head {
+  text-align: Center;
+  font-family: 'Chilanka', cursive;
+  font-size: 60px;
+}
+
+.more {
+  display: none;
+  border-top: 2px solid #666;
+  border-bottom: 2px solid #666
+}
+
+a.showLink,
+a.hideLink {
+  text-align: center;
+  font-family: 'Inconsolata', cursive;
+  font-size: 22px;
+  text-decoration: none;
+  color: #ffe7e7;
+}
+
+
+a.showLink:hover,
+a.hideLink:hover {
+  border-bottom: 1px solid #FFC0CB;
+}
+    </style>
+    
+    <script>
+    function showHide(shID) {
+	if (document.getElementById(shID)) {
+		if (document.getElementById(shID+'-show').style.display != 'none') {
+			document.getElementById(shID+'-show').style.display = 'none';
+			document.getElementById(shID).style.display = 'block';
+		}
+		else {
+			document.getElementById(shID+'-show').style.display = 'inline';
+			document.getElementById(shID).style.display = 'none';
+		}
+	}
+}
+    </script>
+</HEAD>
+
+<BODY>
+
+
+  <header id="main-head" class="TYhead" color="white">
+      <font color="white">
+        <h5>Thank You for contacting us!</h5>
+      </font>
+  </header>
+      
+
+     
+    
+      <a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">See more</a>
+        <br><br><br>
+        <a href="index.html" id="example-show" class="showLink">Go back to HomePage</a>   
+  
+<div id="example" class="more">
+  <p>
+    <font color="white">Thank you for visiting us!
+    
+    <br><br><br>Stefan Stefanescu
+    <br> University of Bucharest, Romania
+        <br> stefanescu_stef@yahoo.com</font>
+    </p><a href="#" id="example-hide" class="hideLink" class="sh_font" onclick="showHide('example');return false;">Hide this content</a>
+    </div>
+
+</BODY>
+</HTML>
