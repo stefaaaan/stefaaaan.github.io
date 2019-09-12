@@ -295,6 +295,14 @@ p {
   @media (max-width: 992px) {
     .slider {
       min-height: 700px; } }
+	  
+.sliderwelcome {
+  background: url(../images/sliderwelcome.jpg) no-repeat;
+  background-size: cover;
+  min-height: 800px; }
+  @media (max-width: 992px) {
+    .slider {
+      min-height: 700px; } }
 
 .btn-outline-light {
   padding: 10px 16px; }
