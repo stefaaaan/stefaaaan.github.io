@@ -247,6 +247,46 @@ p {
   @media (max-width: 992px) {
     .slider {
       min-height: 700px; } }
+	  
+.sliderart {
+  background: url(../images/sliderart.jpg) no-repeat;
+  background-size: cover;
+  min-height: 800px; }
+  @media (max-width: 992px) {
+    .slider {
+      min-height: 700px; } }
+	
+.slidernight {
+  background: url(../images/slidernight.jpg) no-repeat;
+  background-size: cover;
+  min-height: 800px; }
+  @media (max-width: 992px) {
+    .slider {
+      min-height: 700px; } }
+	 
+.sliderrest {
+  background: url(../images/sliderrest.jpg) no-repeat;
+  background-size: cover;
+  min-height: 800px; }
+  @media (max-width: 992px) {
+    .slider {
+      min-height: 700px; } }
+	  
+.sliderhotel {
+  background: url(../images/sliderhotel.jpg) no-repeat;
+  background-size: cover;
+  min-height: 800px; }
+  @media (max-width: 992px) {
+    .slider {
+      min-height: 700px; } }
+	  
+.sliderout {
+  background: url(../images/sliderout.jpg) no-repeat;
+  background-size: cover;
+  min-height: 800px; }
+  @media (max-width: 992px) {
+    .slider {
+      min-height: 700px; } }
 
 .btn-outline-light {
   padding: 10px 16px; }
